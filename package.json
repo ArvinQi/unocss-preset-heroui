@@ -1,17 +1,17 @@
 {
-  "name": "unocss-preset-shadcn",
+  "name": "unocss-preset-nextui",
   "type": "module",
   "version": "0.3.1",
   "packageManager": "pnpm@9.5.0",
-  "description": "use shadcn ui with unocss",
-  "author": "Stephen Zhou <hi@hyoban.cc>",
+  "description": "use nextui with unocss",
+  "author": "Stephen Zhou <arvinqi@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/hyoban/unocss-preset-shadcn#readme",
+  "homepage": "https://github.com/ArvinQi/unocss-preset-nextui#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hyoban/unocss-preset-shadcn"
+    "url": "https://github.com/ArvinQi/unocss-preset-nextui"
   },
-  "bugs": "https://github.com/hyoban/unocss-preset-shadcn/issues",
+  "bugs": "https://github.com/ArvinQi/unocss-preset-nextui/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -49,6 +49,12 @@
     "release": "release-it",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "color": "^4.2.3",
+    "color2k": "^2.0.3",
+    "deepmerge": "^4.3.1",
+    "flat": "^6.0.1"
   },
   "peerDependencies": {
     "unocss": ">= 0.56.0 < 1",
