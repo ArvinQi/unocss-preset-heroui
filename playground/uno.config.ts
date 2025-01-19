@@ -1,11 +1,11 @@
 import { defineConfig, presetIcons, presetUno } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
-import { builtinColors, presetShadcn } from 'unocss-preset-shadcn'
+import presetHeroui from 'unocss-preset-heroui'
+
 const files = [
-  "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  "./node_modules/@nextui-org/theme/dist/components/(button|tooltip|listbox|select|navbar|popover|form|checkbox|input).js",
-];
+  './src/**/*.{js,ts,jsx,tsx,mdx}',
+  '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
+]
 export default defineConfig({
   content: {
     filesystem: files,
@@ -19,6 +19,6 @@ export default defineConfig({
       scale: 1.3,
     }),
     presetAnimations(),
-    presetShadcn(builtinColors.map(c => ({ color: c }))),
+    presetHeroui({}),
   ],
 })
