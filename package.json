@@ -1,10 +1,10 @@
 {
   "name": "unocss-preset-heroui",
   "type": "module",
-  "version": "0.3.1",
-  "packageManager": "pnpm@9.5.0",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.15.4",
   "description": "use heroui with unocss",
-  "author": "Stephen Zhou <arvinqi@qq.com>",
+  "author": "Arvin Qi<arvinqi@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/ArvinQi/unocss-preset-heroui#readme",
   "repository": {

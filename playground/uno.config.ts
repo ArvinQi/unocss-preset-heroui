@@ -19,6 +19,6 @@ export default defineConfig({
       scale: 1.3,
     }),
     presetAnimations(),
-    presetHeroui({}),
+    presetHeroui({defaultTheme: 'light'}),
   ],
 })
