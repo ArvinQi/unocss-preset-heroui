@@ -1,6 +1,5 @@
 import { kebabCase, mapKeys } from '@heroui/shared-utils'
 import Color from 'color'
-
 import type {
   ConfigThemes,
   DefaultThemeType,

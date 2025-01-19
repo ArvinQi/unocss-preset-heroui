@@ -1,7 +1,6 @@
 import deepMerge from 'deepmerge'
 import { omit } from 'lodash-es'
 import { definePreset } from 'unocss'
-
 import { semanticColors } from './colors'
 import { darkLayout, defaultLayout, lightLayout } from './default-layout'
 import resolveConfig from './resolveConfig'
