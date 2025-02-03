@@ -11,11 +11,7 @@ import { Theme } from 'unocss/preset-mini'
 export const builtinRadiuses = [0, 0.3, 0.5, 0.75, 1] as const
 export const DEFAULT_TRANSITION_DURATION = '250ms'
 
-export default definePreset((options?: PresetHerouiOptions): Preset<ConfigTheme> => {
-//   presetHeroui(
-//   options?: PresetHerouiOptions,
-//   globals = true,
-// ): Preset<Theme> {
+export const presetHeroui = definePreset((options?: PresetHerouiOptions): Preset<ConfigTheme> => {
   const {
     prefix = 'heroui',
     defaultTheme = 'light',
