@@ -1,11 +1,11 @@
-import { defineConfig, presetIcons, presetUno } from 'unocss';
-import presetAnimations from 'unocss-preset-animations';
-import { presetHeroui } from 'unocss-preset-heroui';
+import { defineConfig, presetIcons, presetUno } from 'unocss'
+import presetAnimations from 'unocss-preset-animations'
+import presetHeroui from 'unocss-preset-heroui'
 
 const files = [
   './src/**/*.{js,ts,jsx,tsx,mdx}',
   '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}',
-];
+]
 export default defineConfig({
   content: {
     filesystem: files,
@@ -19,6 +19,6 @@ export default defineConfig({
       scale: 1.3,
     }),
     presetAnimations(),
-    presetHeroui({ defaultTheme: 'light' }),
+    presetHeroui({defaultTheme: 'light'}),
   ],
-});
+})
