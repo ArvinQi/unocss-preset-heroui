@@ -1,7 +1,7 @@
 {
   "name": "unocss-preset-heroui",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@9.15.4",
   "description": "use heroui with unocss",
   "author": "Arvin Qi<arvinqi@qq.com>",
