@@ -1,16 +1,17 @@
 import deepMerge from 'deepmerge'
 import { omit } from 'lodash-es'
-import { definePreset } from 'unocss'
+import { definePreset, Preset, Rule } from 'unocss'
 import { semanticColors } from './colors'
 import { darkLayout, defaultLayout, lightLayout } from './default-layout'
 import resolveConfig from './resolveConfig'
 import type { ConfigTheme, ConfigThemes, PresetHerouiOptions } from './types'
 import { isBaseTheme } from './utils/theme'
+import { Theme } from 'unocss/preset-mini'
 
 export const builtinRadiuses = [0, 0.3, 0.5, 0.75, 1] as const
 export const DEFAULT_TRANSITION_DURATION = '250ms'
 
-export default definePreset((options?: PresetHerouiOptions) => {
+export default definePreset((options?: PresetHerouiOptions): Preset<ConfigTheme> => {
 //   presetHeroui(
 //   options?: PresetHerouiOptions,
 //   globals = true,
@@ -102,7 +103,8 @@ export default definePreset((options?: PresetHerouiOptions) => {
       ...resolved?.layout,
     },
     rules: [
-      ...(resolved?.rules || []),
+      // 将规则类型显式声明为 Rule<ConfigTheme>[] 以解决类型错误
+      ...(resolved?.rules || []) as Rule<ConfigTheme>[],
       // Add your custom rules here
     ],
     // variants: resolved?.variants,

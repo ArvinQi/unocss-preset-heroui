@@ -1,11 +1,13 @@
 import { kebabCase, mapKeys } from '@heroui/shared-utils'
 import Color from 'color'
 import type {
+  ConfigTheme,
   ConfigThemes,
   DefaultThemeType,
   LayoutTheme,
 } from './types'
 import { flattenThemeObject } from './utils/object'
+import { DynamicRule } from 'unocss'
 
 const parsedColorsCache: Record<string, number[]> = {}
 
@@ -19,7 +21,7 @@ function resolveConfig(themes: ConfigThemes = {}, defaultTheme: DefaultThemeType
       string,
       string
     >
-    rules: Array<[string, (args: [string]) => Record<string, any>]>
+    rules: DynamicRule<ConfigTheme>[]
   } = {
     variants: [],
     utilities: {},
@@ -63,7 +65,7 @@ function resolveConfig(themes: ConfigThemes = {}, defaultTheme: DefaultThemeType
     //   },
     // )
     resolved.rules.push([
-      themeName,
+      new RegExp(themeName),
       ([theme]) => ({ 'data-theme': theme }),
     ])
 
